@@ -2,7 +2,7 @@ const counter = document.getElementById('counter');
 const counterButton = document.getElementById('button');
 let numero = 0;
 const sonido = new Audio();
-sonido.src = '../assets/audio/listo.mp3'
+sonido.src = 'https://fauriciocrc.github.io/counter/assets/audio/listo.mp3'
 
 counterButton.addEventListener('click', (e) => {
     if (numero < 15){
