@@ -1,0 +1,172 @@
+:root {
+  --bg-color: hsl(0, 0%, 15%);
+  --bg-target-color: hsl(0, 0%, 20%);
+  --text-color: hsl(0, 0%, 90%);
+  --shadow-color: hsla(0, 0%, 100%, 0.5);
+}
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --bg-color: hsl(0, 0%, 90%);
+    --bg-target-color: hsl(0, 0%, 85%);
+    --text-color: hsl(0, 0%, 15%);
+    --shadow-color: hsla(0, 0%, 0%, 0.5);
+  }
+}
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+}
+::selection {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+figure,
+iframe,
+img,
+picture,
+svg,
+video {
+  display: block;
+  width: 100%;
+}
+figure {
+  margin: 0;
+}
+svg {
+  fill: currentColor;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0;
+  font-size: 1rem;
+}
+button,
+form,
+input,
+label,
+select,
+textarea {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  color: inherit;
+}
+button,
+select {
+  cursor: pointer;
+}
+select {
+  background-color: var(--bg-color);
+}
+textarea {
+  resize: none;
+}
+table,
+td,
+tr {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  border: 1px solid var(--shadow-color);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+dl,
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+li {
+  list-style: none;
+}
+dd {
+  margin-left: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  font-family: 'IBM Plex Mono', monospace;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.body-counter-finished{
+  box-shadow: inset 0 0 .5em white;
+}
+
+.counter{
+  font-size: 4rem;
+}
+.counter-finished{
+  color: hsl(76, 87%, 31%);
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin-top: 2rem;
+    overflow: hidden;
+    border-radius: .5em;
+    background-color: hsl(76, 87%, 31%);
+    transition: background-color 300ms;
+}
+.button:active{
+  background-color: hsl(76, 87%, 21%);
+}
+@media screen and (min-width: 480px){
+    .button{
+        width: 70vw;
+    }
+}
+@media screen and (min-width: 960px){
+    .button{
+        width: 40vw;
+        margin-top: 1rem;
+    }
+}
+
+.icon{
+    font-size: 7rem;
+    color:hsl(0, 0%, 85%);
+}
+
+@media screen and (hover : hover) {
+    .button:hover{
+        background-color: hsl(76, 87%, 21%);
+    }
+    .button:hover .icon{
+        color: hsl(0, 0%, 65%)
+    }
+}
